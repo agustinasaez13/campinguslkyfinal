@@ -1,0 +1,191 @@
+/* Acá empieza la sección Main */
+.bloquesder {
+    color: $color-secondary; font-style: italic;
+    font-family: $font-stack;
+    
+    .imagder {
+        text-align: center;
+
+        img {
+            border: 1.5px solid $color-secondary;
+            width: 250px;
+        }
+    }
+
+    .textoder {
+        width: 100%;
+        display: inline-table;
+
+        h3 {
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+        }
+
+        p {
+        padding: 10px 10px 10px 10px;
+        font-size: 11px;
+        color: #F7F7E8;
+        text-align: center;
+        animation-duration: 3s;
+        animation-name: textop;
+        }
+
+        @keyframes textop {
+            from {
+                margin-left: 100%;
+                width: 300%
+            }
+    
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bloquesizq {
+    color: $color-secondary; font-style: italic;
+    font-family: $font-stack;
+    
+    .imagizq {
+        text-align: center;
+
+        img {
+            border: 1.5px solid $color-secondary;
+            width: 250px;
+        }
+    }
+
+    .textoizq {
+        width: 100%;
+        display: inline-table;
+
+        h3 {
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+        }
+
+        p {
+        padding: 10px 10px 10px 10px;
+        font-size: 11px;
+        color: #F7F7E8;
+        text-align: center;
+        animation-duration: 3s;
+        animation-name: textop;
+        }
+
+        @keyframes textop {
+            from {
+                margin-left: 100%;
+                width: 300%
+            }
+    
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Responsive tablet */
+@media screen and (min-width: 768px) {
+    .bloquesizq {
+        display: inline-flex;
+        padding: 20px 25px 20px 25px;
+        .imagizq {
+            img {
+                border: 2px solid $color-secondary;
+                width: 320px;  
+            }
+        }
+        .textoizq {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: inline-grid;
+                h3 {
+                    font-size: 23px;
+                    text-align: left;
+                    padding: 0px 0px 0px 20px;
+                }
+                p {
+                    font-size: 13px;
+                    text-align: left;
+                    padding: 0px 0px 0px 20px;
+                    }
+        }
+    }
+
+    .bloquesder {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        padding: 20px 25px 20px 25px;
+        .imagder {
+            img {
+                border: 2px solid $color-secondary;
+                width: 320px;
+            }
+        }
+        .textoder {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: inline-grid;
+                h3 {
+                    font-size: 23px;
+                    text-align: right;
+                    padding: 0px 20px 0px 0px;
+                }
+                p {
+                    font-size: 13px;
+                    text-align: right;
+                    padding: 0px 20px 0px 0px;
+                    }
+        }
+    }
+}
+
+/* Responsive desktop */
+@media screen and (min-width: 1024px) {
+    .bloquesizq {
+        .imagizq {
+            img {
+                border: 2px solid $color-secondary;
+                width: 390px;  
+            }
+        }
+        .textoizq {
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 16px;
+                }
+        }
+    } 
+
+    .bloquesder {
+        .imagder {
+            img {
+                border: 2px solid $color-secondary;
+                width: 390px;  
+            }
+        }
+        .textoder {
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 16px;
+                }
+        }
+    } 
+}

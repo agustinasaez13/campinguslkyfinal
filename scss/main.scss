@@ -1,0 +1,201 @@
+$color-primary: #557174;
+$color-secondary: #F7F7E8;
+$font-stack: 'Open Sans', sans-serif;
+
+body{
+    background-color: $color-primary;
+}
+
+/* SCSS del header, main y footer */ 
+@import "_header";
+@import "_cuerpo";
+@import "_footer";
+
+/* SCSS de las pages adicionales*/ 
+
+/* SCSS de Servicios*/ 
+.servimg {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    text-align: center;
+    .card {
+        background-color: $color-secondary;
+        text-align: center;
+        margin: 10px;
+        padding: 5px;
+        font-size: 13px;
+        font-family: $font-stack;
+        font-style: italic;
+    }
+}
+
+/* SCSS de Precios*/ 
+.tprecios{
+    font-family: $font-stack;
+    color: $color-secondary;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    h4 {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    table {
+        border-collapse: separate;
+        border: #94c0c5 5px solid;
+        margin: 0 auto;
+    }
+    td {
+        font-size: 10px;
+    }
+    th {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+/* Acá Excursiones */
+.row {
+    color: $color-secondary;
+    padding: 15px 10px 15px 10px ;
+    margin-right: auto;
+    font-family: $font-stack;
+
+    @mixin font ($font-size, $text-align) {
+        font-size: $font-size;
+        text-align: $text-align;
+    }
+     
+    div {
+        margin: 10px;
+        text-align: center;
+
+        h4 {
+        @include font(15px,center);
+        text-decoration: underline;
+        }
+
+        p {
+        @include font(10px,center);
+        }
+
+        img {
+        width: 150px;
+        border-radius: 15%;
+        border: #b9c3c4 solid 1px;
+        text-align: center;
+        }
+    }
+}
+
+/* Acá Multimedia */
+.carousel-item {
+    height: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+/* Responsive tablet */
+@media screen and (min-width: 768px) {
+    .servimg {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        .card {
+            font-size: 15px;
+            margin:0px auto;
+        }
+    }
+
+    .tprecios{
+        padding: 10px 20px 10px 20px;
+        h4 {
+            font-size: 20px;
+        }
+        table {
+            border: #94c0c5 6px solid;
+        }
+        td {
+            font-size: 13px;
+        }
+        th {
+            font-size: 17px;
+        }
+    }
+
+    .row {
+
+        @mixin font ($font-size, $text-align) {
+            font-size: $font-size;
+            text-align: $text-align;
+        }
+         
+        div {
+            h4 {
+            @include font(18px,center);
+            }
+    
+            p {
+            @include font(13px,center);
+            }
+    
+            img {
+            width: 200px;
+            border-radius: 18%;
+            border: #b9c3c4 solid 1.5px;
+            }
+        }
+    }
+}
+
+/* Responsive desktop */
+@media screen and (min-width: 1024px) {
+    .servimg {
+        .card {
+            font-size: 17px;
+        }
+    }
+
+    .tprecios{
+        padding: 10px 30px 10px 30px;
+        h4 {
+            font-size: 22px;
+        }
+        table {
+            border: #94c0c5 6.5px solid;
+        }
+        td {
+            font-size: 15px;
+        }
+        th {
+            font-size: 20px;
+        }
+    }
+
+    .row {
+
+        @mixin font ($font-size, $text-align) {
+            font-size: $font-size;
+            text-align: $text-align;
+        }
+         
+        div {
+            h4 {
+            @include font(20px,center);
+            }
+    
+            p {
+            @include font(15px,center);
+            }
+    
+            img {
+            width: 250px;
+            border-radius: 20%;
+            border: #b9c3c4 solid 2px;
+            }
+        }
+    }
+}
